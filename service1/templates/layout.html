@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head_content %}{% endblock %}
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('generator') }}">Generator</a>
+        </div>
+
+        {% block body_content %}
+    </body>
+</html>
