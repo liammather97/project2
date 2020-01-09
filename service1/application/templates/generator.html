@@ -1,7 +1,7 @@
 
 {% extends "layout.html" %}
 
-{% block body_content %}
+{% block content %}
     <h1>Type in your name: </h1>
     <form action="{{ url_for('gen') }}" method="post">
         {{ form.hidden_tag() }}
