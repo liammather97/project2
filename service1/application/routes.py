@@ -9,5 +9,8 @@ def home():
 @app.route('/generator', methods=['GET', 'POST'])
 def gen():
     form = NameForm()
-    return render_template('generator.html', title='Enter your name', form=form)
+    if request.method == 'POST':
+        return form.name
+
+    return render_template('generator.html', title='Enter your name: ', form=form)
 
