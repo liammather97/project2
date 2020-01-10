@@ -2,10 +2,11 @@ from flask import Flask, redirect, url_for, request
 from application import app
 import random
 
-suffix = [" the Great", " the Smelly", " the Rich", " The cool",
+suffix = [" the Great", " the Smelly", " the Rich", " the Cool",
 " the Jeweller", " the Daddy", " the Snitch", " the Gangsta",
- " the Gunner", " the Dude"]
+ " the Gunner", " the Dude", " the Thief", " the Original", " the Nerd"]
 
 @app.route('/suffix', methods=['GET', 'POST'])
 def suffix_gen():
-    return(random.choice(suffix))
+    suffix1 = (random.choice(suffix))
+    return suffix1

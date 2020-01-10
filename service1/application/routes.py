@@ -10,7 +10,7 @@ def home():
 def generator():
     form = NameForm()
     if request.method == 'POST':
-        return form.name.data
+       return form.name.data
+
 
     return render_template('generator.html', title='Generator', form=form)
-

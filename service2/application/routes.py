@@ -4,8 +4,9 @@ import random
 
 prefix = ["Yung ", "Lil ", "Big ", "Tall ",
 "Short ", "Chief ", "Sir ", "Lord ", "Slick ",
- "Fat ", "Skinny "]
+ "Fat ", "Skinny ", "Icy ", "Spooky ", "Clever " "Colonel "]
 
 @app.route('/prefix', methods=['GET', 'POST'])
 def prefix_gen():
-    return (random.choice(prefix))
+    prefix1 = (random.choice(prefix))
+    return prefix1
