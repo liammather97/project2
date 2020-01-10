@@ -2,9 +2,9 @@ from flask import Flask, redirect, url_for, request
 from application import app
 import random
 
-suffix = [" the great", " the smelly", " the rich", " the cool",
-" the jeweller", " the daddy", " the snitch", " the gangsta",
- " the gunner", " the dude"]
+suffix = [" the Great", " the Smelly", " the Rich", " The cool",
+" the Jeweller", " the Daddy", " the Snitch", " the Gangsta",
+ " the Gunner", " the Dude"]
 
 @app.route('/prefix', methods=['GET', 'POST'])
 def suffix_gen():
