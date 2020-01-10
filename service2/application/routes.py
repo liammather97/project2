@@ -8,5 +8,5 @@ prefix = ["Yung ", "Lil ", "Big ", "Tall ",
 
 @app.route('/prefix', methods=['GET', 'POST'])
 def prefix_gen():
-    prefix1 = (random.choice(prefix))
+    prefix1 = {"choice":random.choice(prefix))}
     return prefix1

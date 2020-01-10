@@ -2,7 +2,6 @@
 version: '3.7'
 services:
     nginx:
-        container_name: nginx
         image: nginx:latest
         ports:
             - target: 80
@@ -13,7 +12,7 @@ services:
               source: ./nginx/nginx.conf
               target: /etc/nginx/nginx.conf
         depends_on:
-            - app
+            - service1
 
     service1:
       build:
@@ -22,7 +21,6 @@ services:
       image: 35.246.53.45:5001/service1
       ports:
       - target: 5001
-        published: 5001
     
     service2:
       build:
@@ -31,7 +29,6 @@ services:
       image: 35.246.53.45:5002/service2
       ports:
       - target: 5002
-        published: 5002
     
     service3:
       build:
@@ -40,7 +37,6 @@ services:
       image: 35.246.53.45:5003/service3
       ports:
       - target: 5003
-        published: 5003
 
     service4:
       build:
@@ -49,7 +45,6 @@ services:
       image: 35.246.53.45:5004/service4
       ports:
       - target: 5004
-        published: 5004
 
 ...
 

@@ -8,5 +8,5 @@ suffix = [" the Great", " the Smelly", " the Rich", " the Cool",
 
 @app.route('/suffix', methods=['GET', 'POST'])
 def suffix_gen():
-    suffix1 = (random.choice(suffix))
+    suffix1 = {"choice":random.choice(suffix)}
     return suffix1

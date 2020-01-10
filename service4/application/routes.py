@@ -1,13 +1,14 @@
 from flask import render_template, redirect, url_for
 from application import app
-import requests
 
-@app.route('/request')
-def path():
+@app.route('/')
+@app.route('/home',methods=('GET','POST'))
+def home(json):
+    prefix=json("prefix")
+    suffix=json("suffix")
+    user_input=json('user_input')
+    combined = prefix + user_input + suffix
+    result = {"Result":combined}
+    return result
 
-    r1 = requests.get("http://service1:5001")
-    r2 = requests.get("http://service2:5002")
-    r3 = requests.get("http://service3:5003")
-
-    return r2, r1, r3
 
