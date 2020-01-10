@@ -5,8 +5,9 @@ import requests
 @app.route('/request')
 def path():
 
-    r1 = requests.get("http://service1:5000")
-    r2 = requests.get("http://service2:5000")
-    r3 = requests.get("http://service3:5000")
+    r1 = requests.get("http://service1:5001")
+    r2 = requests.get("http://service2:5002")
+    r3 = requests.get("http://service3:5003")
 
     return r1.text, r2.text, r3.text
+

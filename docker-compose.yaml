@@ -1,0 +1,55 @@
+---
+version: '3.7'
+services:
+    nginx:
+        container_name: nginx
+        image: nginx:latest
+        ports:
+            - target: 80
+              published: 80
+              protocol: tcp
+        volumes:
+            - type: bind
+              source: ./nginx/nginx.conf
+              target: /etc/nginx/nginx.conf
+        depends_on:
+            - app
+
+    service1:
+      build:
+        context: ./service1
+        dockerfile: Dockerfile
+      image: 35.246.53.45:5001/service1
+      ports:
+      - target: 5001
+        published: 5001
+    
+    service2:
+      build:
+        context: ./service2
+        dockerfile: Dockerfile
+      image: 35.246.53.45:5002/service2
+      ports:
+      - target: 5002
+        published: 5002
+    
+    service3:
+      build:
+        context: ./service3
+        dockerfile: Dockerfile
+      image: 35.246.53.45:5003/service3
+      ports:
+      - target: 5003
+        published: 5003
+
+    service4:
+      build:
+        context: ./service4
+        dockerfile: Dockerfile
+      image: 35.246.53.45:5004/service4
+      ports:
+      - target: 5004
+        published: 5004
+
+...
+

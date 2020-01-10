@@ -6,6 +6,6 @@ suffix = [" the Great", " the Smelly", " the Rich", " The cool",
 " the Jeweller", " the Daddy", " the Snitch", " the Gangsta",
  " the Gunner", " the Dude"]
 
-@app.route('/prefix', methods=['GET', 'POST'])
+@app.route('/suffix', methods=['GET', 'POST'])
 def suffix_gen():
     return(random.choice(suffix))
