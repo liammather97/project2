@@ -1,5 +1,5 @@
 from application import app
-from flask import render_template, request, redirect, url_for, Response
+from flask import render_template, request, redirect, url_for, Response, jsonify
 from application.forms import NameForm
 import requests
 import json
@@ -12,10 +12,7 @@ def home():
 def generator():
     form = NameForm()
     if form.validate_on_submit:
-        r2 = requests.get("http://service2:5002/")
-        r3 = requests.get("http://service3:5003/")
-        data = {"prefix":r2["choice"],"suffix":r3["choice"],"user_input":form.name.data}
-        r4 = requests.post("http://service4:5004/", json=data)
-        return r4["Result"]
+        r4 = requests.post("http://service4:5004/home", json={"data":form.submit.data})
+        r5 =  requests.get("http://service4:5004/home").json()["Result"]
+        return r5
     return render_template('generator.html', title='Generator', form=form)
-

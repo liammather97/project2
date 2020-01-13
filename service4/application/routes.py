@@ -1,15 +1,15 @@
-from flask import render_template, redirect, url_for
+from flask import render_template, redirect, url_for, jsonify
 from application import app
 import json
 
 @app.route('/')
 @app.route('/home',methods=('GET','POST'))
 def home(json):
-    prefix=json("prefix")
-    suffix=json("suffix")
-    user_input=json('user_input')
-    combined = prefix + user_input + suffix
-    result = {"Result":combined}
+    request.get(service2).json()
+    request.get(service3).json()
+    user_input=request.get_json('data')
+    combined = prefix1 + user_input + suffix1
+    result = jsonify({"Result":combined})
     return result
 
 

@@ -1,6 +1,7 @@
-from flask import Flask, redirect, url_for, request
+from flask import Flask, redirect, url_for, request, jsonify
 from application import app
 import random
+import json
 
 prefix = ["Yung ", "Lil ", "Big ", "Tall ",
 "Short ", "Chief ", "Sir ", "Lord ", "Slick ",
@@ -8,5 +9,6 @@ prefix = ["Yung ", "Lil ", "Big ", "Tall ",
 
 @app.route('/prefix', methods=['GET', 'POST'])
 def prefix_gen():
-    prefix1 = {"choice":random.choice(prefix))}
+    the_choice=random.choice(prefix)
+    prefix1 = jsonify({"choice":the_choice})
     return prefix1

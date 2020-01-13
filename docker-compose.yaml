@@ -18,7 +18,7 @@ services:
       build:
         context: ./service1
         dockerfile: Dockerfile
-      image: 35.246.53.45:5001/service1
+      image: 35.246.53.45:5000/service1
       ports:
       - target: 5001
     
@@ -26,7 +26,7 @@ services:
       build:
         context: ./service2
         dockerfile: Dockerfile
-      image: 35.246.53.45:5002/service2
+      image: 35.246.53.45:5000/service2
       ports:
       - target: 5002
     
@@ -34,7 +34,7 @@ services:
       build:
         context: ./service3
         dockerfile: Dockerfile
-      image: 35.246.53.45:5003/service3
+      image: 35.246.53.45:5000/service3
       ports:
       - target: 5003
 
@@ -42,7 +42,7 @@ services:
       build:
         context: ./service4
         dockerfile: Dockerfile
-      image: 35.246.53.45:5004/service4
+      image: 35.246.53.45:5000/service4
       ports:
       - target: 5004
 
