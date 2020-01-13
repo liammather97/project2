@@ -2,6 +2,7 @@ from application import app
 from flask import render_template, request, redirect, url_for, Response
 from application.forms import NameForm
 import requests
+import json
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
