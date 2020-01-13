@@ -7,11 +7,11 @@ create the rap name.
 
 ## Risk Analysis
 
-![risk](https://github.com/liammather97/project2/tree/master/Documentation/RiskAnalysis.png
+![risk](https://github.com/liammather97/project2/tree/master/Documentation/RiskAnalysis.png)
 
 ## Trello
 
-![trello](https://github.com/liammather97/project2/tree/master/Documentation/Trello.png
+![trello](https://github.com/liammather97/project2/tree/master/Documentation/Trello.png)
 
 ## Tools Used
 
@@ -22,7 +22,8 @@ The tools I used to develop and deploy this app were:
 - Jenkins
 - Python Flask
 - Git
+- Nginx
 
-![ansible](https://github.com/liammather97/project2/tree/master/Documentation/Ansible.png
+![ansible](https://github.com/liammather97/project2/tree/master/Documentation/Ansible.png)
 
-![service](https://github.com/liammather97/project2/tree/master/Documentation/ServiceDiagram.png 
+![service](https://github.com/liammather97/project2/tree/master/Documentation/ServiceDiagram.png) 
