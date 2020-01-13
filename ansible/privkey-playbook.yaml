@@ -15,3 +15,11 @@
       owner: jenkins
       group: jenkins
       mode: u=rw,g=,o=
+  - name: "install private key"
+    copy:
+      src: ~/.ssh/ansible_id_rsa.pub
+      dest: /home/jenkins/.ssh/id_rsa.pub
+      owner: jenkins
+      group: jenkins
+      mode: u=rw,g=,o=
+
