@@ -1,0 +1,7 @@
+- import_playbook: keypair-playbook.yaml
+- import_playbook: docker-playbook.yaml
+- import_playbook: jenkinsuser-playbook.yaml
+- import_playbook: pubkey-playbook.yaml
+- import_playbook: privkey-playbook.yaml
+- import_playbook: jenkins-playbook.yaml
+- import_playbook: swarmmaster-playbook.yaml
